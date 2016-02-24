@@ -40,6 +40,7 @@ $items = $itemsQuery->rowCount() ? $itemsQuery : [];
               <?php if(!$item['done']): ?>
                 <a href="mark.php?as=done&item=<?php echo $item['id']; ?>" class="done-button">Mark as done</a>
               <?php endif; ?>
+              <a href="delete.php?id=<?php echo $item['id']; ?>">Remove Item</a>
             </li>
           <?php endforeach; ?>
         </ul>
